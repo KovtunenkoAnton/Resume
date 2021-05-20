@@ -1,0 +1,9 @@
+<h1 class="text-center">HR</h1>
+
+<ul class="list_hr">
+  {{#each listHr}}
+  <li class= "list-group-item list-group-item-success text-center fs-3">
+    <a href='/profile/{{this._id}}'>{{this.email}}</a>
+    {{/each}}
+  </li>
+</ul>

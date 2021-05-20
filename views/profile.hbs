@@ -1,0 +1,122 @@
+<div>
+    <div class="data" data-userId="{{userId}}">
+    <div class="data__main px-4 py-4 bg-warn">
+        <div class="data__main-top d-flex justify-content-left align-items-center">
+          <img class="profile-avatar" src="/images/image.jpeg" width="150px" height="150px" alt="" srcset="">
+          <div class="data__main-top-info ms-4">
+            <span class="propName px-1 py-1 my-1 fw-bold">ФИО :</span>
+            <span class="propValue px-1 py-1 my-1" id="firstName">Nevelich</span>
+            <span class="propValue px-1 py-1 my-1" id="lastName">Andrew</span>
+            <span class="propValue px-1 py-1 my-1" id="patronymic">Igorevich</span><br>
+          <span class="propName px-1 py-1 my-1 fw-bold">Почта :</span><span class="propValue px-1 py-1 my-1" id="email">lalal@mail.ru</span><br>       
+          <span class="propName px-1 py-1 my-1 fw-bold">Контактный телефон :</span><span class="propValue px-1 py-1 my-1" id="phone">+7 977 244 43 34</span><br>    
+          </div>  
+        </div>
+        <ul class="subList d-flex justify-content-between align-items-center p-0 m-0 mt-4">
+          <div class="subList__string">
+            <span class="propName px-1 py-1 my-1 fw-bold">Дата рождения :</span><span class="propValue px-1 py-1 my-1" id="birthDay">1245.05.12</span>
+          </div>
+          <div class="subList__string">
+            <span class="propName px-1 py-1 my-1 fw-bold">Город :</span><span class="propValue px-1 py-1 my-1" id="residence">Москва</span>
+          </div>
+        </ul>
+    </div>
+    <!-- /.data__main -->
+    <div class="container-data-sub d-flex justify-content-center align-items-center px-5 py-5">
+      {{#if isUser}}
+      <div class="data__sub d-flex justify-content-between">
+        <div class="data__sub-string-container">
+{{!--<button class="data__button px-3 py-3 my-1 me-4 my-4 fs-4 d-flex align-items-center justify-content-center text-center btn btn-primary" id="experience">Опыт</button> --}}
+          <a class="data__button px-3 py-3 my-1 me-4 my-4 fs-4 d-flex align-items-center justify-content-center text-center btn btn-primary btn btn-primary" data-bs-toggle="modal" href="#experience" role="button" id="experienceBtn">Опыт</a>
+          <a class="data__button px-3 py-3 my-1 me-4 my-4 fs-4 d-flex align-items-center justify-content-center text-center btn btn-primary btn btn-primary" data-bs-toggle="modal" href="#education" role="button" id="educationBtn">Образование</a>
+        </div>
+        <div class="data__sub-string-container">
+          <a class="data__button px-3 py-3 my-1  my-4 fs-4 d-flex align-items-center justify-content-center text-center btn btn-primary btn btn-primary" data-bs-toggle="modal" href="#aboutSelf" role="button" id="aboutSelfBtn">Обо мне</a>
+          <a class="data__button px-3 py-3 my-1  my-4 fs-4 d-flex align-items-center justify-content-center text-center btn btn-primary btn btn-primary" data-bs-toggle="modal" href="#CareerExpectations" role="button" id="CareerExpectationsBtn">Карьерные ожидание</a>
+        </div>
+      {{/if}}
+      {{#if isHr}}
+        {{!-- <a class="data__button data__button--big" href="">Найти сотрудника</a> --}}
+      {{/if}}
+    </div>
+    <!-- /.data__sub -->
+    </div>
+    {{!-- experience --}}
+        <div class="modal fade" id="experience" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel">Опыт работы</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <span class="propName px-1 py-1 my-1 fw-bold">Место работы :</span><span class="propValue px-1 py-1 my-1" id="workPlace"></span><br>       
+            <span class="propName px-1 py-1 my-1 fw-bold">Позиция :</span><span class="propValue px-1 py-1 my-1" id="position"></span><br>   
+            <span class="propName px-1 py-1 my-1 fw-bold">Стаж :</span><span class="propValue px-1 py-1 my-1" id="time"></span><br>       
+            <span class="propName px-1 py-1 my-1 fw-bold">Компании :</span><span class="propValue px-1 py-1 my-1" id="companies"></span><br>   
+            <span class="propName px-1 py-1 my-1 fw-bold">Примеры работ :</span><span class="propValue px-1 py-1 my-1" id="examples"></span><br>       
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- aboutSelf --}}
+    <div class="modal fade" id="aboutSelf" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel">Обо мне</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <span class="propName px-1 py-1 my-1 fw-bold">Текущие обязанности:</span><span class="propValue px-1 py-1 my-1" id="currentWorkFlow"></span><br>       
+            <span class="propName px-1 py-1 my-1 fw-bold">Что нравится делать :</span><span class="propValue px-1 py-1 my-1" id="likeToDo"></span><br>
+            <span class="propName px-1 py-1 my-1 fw-bold">Что не нравится делать :</span><span class="propValue px-1 py-1 my-1" id="likeNotToDo"></span><br>       
+            <span class="propName px-1 py-1 my-1 fw-bold">Достижения :</span><span class="propValue px-1 py-1 my-1" id="achievements"></span><br>       
+            <span class="propName px-1 py-1 my-1 fw-bold">Видео обо мне :</span><span class="propValue px-1 py-1 my-1" id="aboutSelfVideo"></span><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- education --}}
+        <div class="modal fade" id="education" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel">Образование</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <span class="propName px-1 py-1 my-1 fw-bold">Университет :</span><span class="propValue px-1 py-1 my-1" id="university"></span><br>       
+            <span class="propName px-1 py-1 my-1 fw-bold">Колледж :</span><span class="propValue px-1 py-1 my-1" id="college"></span><br>
+            <span class="propName px-1 py-1 my-1 fw-bold">Специальность :</span><span class="propValue px-1 py-1 my-1" id="specialty"></span><br>       
+            <span class="propName px-1 py-1 my-1 fw-bold">Курсы :</span><span class="propValue px-1 py-1 my-1" id="courses"></span><br>       
+            <span class="propName px-1 py-1 my-1 fw-bold">Стажировки :</span><span class="propValue px-1 py-1 my-1" id="internships"></span><br>
+            <span class="propName px-1 py-1 my-1 fw-bold">Сертификаты :</span><span class="propValue px-1 py-1 my-1" id="certificates"></span><br>
+            <span class="propName px-1 py-1 my-1 fw-bold">Владение языками :</span><span class="propValue px-1 py-1 my-1" id="languages"></span><br>       
+            <span class="propName px-1 py-1 my-1 fw-bold">Ключевые навыки :</span><span class="propValue px-1 py-1 my-1" id="coreSkills"></span><br>       
+            <span class="propName px-1 py-1 my-1 fw-bold">Стек технологий :</span><span class="propValue px-1 py-1 my-1" id="technologiesStack"></span><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!-- careerExpectations --}}
+    <div class="modal fade" id="CareerExpectations" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalToggleLabel">Карьерные ожидание</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <span class="propName px-1 py-1 my-1 fw-bold">Место работы :</span><span class="propValue px-1 py-1 my-1" id="desiredPosition"></span><br>       
+            <span class="propName px-1 py-1 my-1 fw-bold">Позиция :</span><span class="propValue px-1 py-1 my-1" id="wantToDo"></span><br>
+            <span class="propName px-1 py-1 my-1 fw-bold">Место работы :</span><span class="propValue px-1 py-1 my-1" id="desiredSalary"></span><br>       
+          </div>
+        </div>
+      </div>
+    </div>
+    {{!--  --}}
+  </div>
+  <!-- /.data -->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

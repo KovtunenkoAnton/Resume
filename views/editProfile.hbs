@@ -1,0 +1,61 @@
+<style>
+  form {
+    padding: 10px;
+  }
+</style>
+<h1>Редактировать</h1>
+
+<form id="mainInfo">
+  <h3>Основная информация</h3>
+  <label class="list-group-item list-group-item-primary" for="firstName">Имя<input class="list-group-item list-group-item-primary" value="{{userFirstName}}" name="firstName" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="lastName">Фамилия<input class="list-group-item list-group-item-primary" value="{{lastName}}" name="lastName" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="patronymic">Отчество<input class="list-group-item list-group-item-primary" value="{{patronymic}}" name="patronymic" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="birthday">Дата рождения<input class="list-group-item list-group-item-primary" value="{{birthday}}" name="birthday" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="residence">Город<input class="list-group-item list-group-item-primary" value="{{residence}}" name="residence" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="number">Контактный телефон<input class="list-group-item list-group-item-primary" value="{{phone}}" name="number" type="number"></label><br>
+  <button class="list-group-item list-group-item-success" type="submit" id="mainButton">Сохранить</button>
+</form>
+<form id="aboutSelf">
+  <h3>О себе</h3> 
+  <label class="list-group-item list-group-item-primary" for="likeToDo">Чем Вы любите заниматься в свободное время?<input class="list-group-item list-group-item-primary" value="{{likeToDo}}" name="likeToDo"
+      type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="likeNotToDo">Что Вы не любите?<input class="list-group-item list-group-item-primary" value="{{likeNotToDo}}" name="likeNotToDo" type="text"></label><br>
+  <button class="list-group-item list-group-item-success" type="submit" id="aboutSelfButton">Сохранить</button>
+</form>
+<form id="job">
+  <h3>Карьера</h3> 
+  <label class="list-group-item list-group-item-primary" for="workPlace">Текущее место работы<input class="list-group-item list-group-item-primary" value="{{workPlace}}" name="workPlace" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="position">Текущая должность<input class="list-group-item list-group-item-primary" value="{{position}}" name="position" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="desiredPosition">Желаемая должность<input class="list-group-item list-group-item-primary" value="{{desiredPosition}}" name="desiredPosition"
+      type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="desiredSalary">Ожидаемая зароботная плата<input class="list-group-item list-group-item-primary" value="{{desiredSalary}}" name="desiredSalary"
+      type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="wantToDo">Чем Вы хотите заниматься?<input class="list-group-item list-group-item-primary" value="{{wantToDo}}" name="wantToDo" type="text"></label><br>
+<button class="list-group-item list-group-item-success" type="submit" id="jobButton">Сохранить</button>
+</form>
+<form id="experience">
+  <h3>Опыт работы</h3> 
+  <label class="list-group-item list-group-item-primary" for="time">Стаж работы<input class="list-group-item list-group-item-primary" value="{{time}}" name="time" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="companies">Организации в которых Вы работали<input class="list-group-item list-group-item-primary" value="{{companies}}" name="companies"
+      type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="examples">Ссылки на примеры работ<input class="list-group-item list-group-item-primary" value="{{examples}}" name="examples" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="currentWorkFlow">Работаете ли в настоящее время?<input class="list-group-item list-group-item-primary" value="{{currentWorkFlow}}" name="currentWorkFlow"
+      type="text"></label><br>
+<button class="list-group-item list-group-item-success" type="submit" id="experienceButton">Сохранить</button>
+</form>
+<form id="education">
+  <h3>Образование и знания</h3> 
+  <label class="list-group-item list-group-item-primary" for="university">Высшее учебное заведение<input class="list-group-item list-group-item-primary" value="{{university}}" name="university" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="college">Среднее профессиональное образование<input class="list-group-item list-group-item-primary" value="{{college}}" name="college"
+      type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="specialty">Специальность<input class="list-group-item list-group-item-primary" value="{{specialty}}" name="specialty" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="courses">Наименование курсов повышения квалификации<input class="list-group-item list-group-item-primary" value="{{courses}}" name="courses"
+      type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="internships">Стажировки<input class="list-group-item list-group-item-primary" value="{{internships}}" name="internships" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="certificates">Сертификаты<input class="list-group-item list-group-item-primary" value="{{certificates}}" name="certificates" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="languages">Знание иностранных языков<input class="list-group-item list-group-item-primary" value="{{languages}}" name="languages" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="coreSkills">Ключевые навыки<input class="list-group-item list-group-item-primary" value="{{coreSkills}}" name="coreSkills" type="text"></label>
+  <label class="list-group-item list-group-item-primary" for="technologiesStack">Профессиональные навыки<input class="list-group-item list-group-item-primary" value="{{technologiesStack}}" name="technologiesStack"
+      type="text"></label><br>
+      <button class="list-group-item list-group-item-success" type="submit" id="educationButton">Сохранить</button>
+</form>

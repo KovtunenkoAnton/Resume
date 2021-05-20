@@ -1,0 +1,9 @@
+<h1 class="text-center">Соискатели</h1>
+
+<ul class="list_resumes">
+  {{#each listCandidates}}
+  <li class= "list-group-item list-group-item-success text-center fs-3">
+    <a class="link2page" href='/profile/{{this._id}}'>{{this.email}}</a>
+    {{/each}}
+  </li>
+</ul>
